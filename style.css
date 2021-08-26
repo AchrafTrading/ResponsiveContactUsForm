@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fae9fb;
+}
+.container{
+    max-width: 1020px;
+    width: 100%;
+    border-radius: 12px;
+    background: #fff;
+    margin: 0 20px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0,0.15);
+}
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+.container .img-box{
+    max-width:70% ;
+    padding:0px 20px;
+}
+.container .img-box img{
+    width: 100%;
+}
+.container .topic{
+    font-size: 22px;
+    font-weight: 500;
+    color: #ba24c2 ;
+}
+.container form{
+    margin-right: 30px;
+    width: 40%;
+}
+.content .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+}
+.content .input-box input{
+    position: absolute;
+    padding-left: 16px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border-radius: 6px;
+    outline: none;
+    background: #fae9fb;
+    border: 2px solid transparent;
+    transition: all 0.6s ;
+}
+.content .input-box input:focus,
+.content .input-box input:valid{
+    border: 2px solid #ba24c2;
+    background: white;
+}
+
+.content .input-box label{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #636c72 ;
+    pointer-events: none;
+    font-size: 15px;
+    transform: translateY(-50%);
+    transition: all 0.3s ;
+}
+.content .input-box input:focus ~ label,
+.content .input-box input:valid ~ label{
+    top: 0;
+    left: 16px;
+    display: 12px;
+    background: white;
+    color: violet;
+}
+.content .message-box {
+    height: 100px;
+    position: relative;
+}
+.content .message-box textarea{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    background:  #fae9fb;
+    padding: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.content .message-box textarea:focus{
+    border: 2px solid #ba24c2;
+    background: #fff;
+}
+.content .message-box label{
+    position: absolute;
+    left: 18px;
+    top: 6px;
+    color: #636c72;
+    transition: all 0.3s ease;
+}
+.content .message-box textarea:focus ~ label
+{
+    left: 16px;
+    top: -10px;
+    background: #fff;
+    color: violet;
+}
+.content .input-box input[type="submit"]{
+    padding-left: 0;
+    color: #fff;
+    background: #ba24c2;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.content .input-box input[type="submit"]:hover{
+    color: #ba24c2;
+    background:#fff ;
+}
+@media(max-width: 1000px){
+    .content .img-box{
+        max-width: 70%;
+    }
+    .content{
+        padding: 10px 0;
+    }
+}
+@media(max-width: 900px){
+    .content .img-box{
+       display: none;
+    }
+    .container form{
+        margin-right: 30px;
+        width: 100%;
+    }
+}
